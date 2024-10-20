@@ -6,6 +6,7 @@ app.get('/', (req, res) => {
     res.send('Hello, Docker!');
 });
 
-app.listen(3000, '0.0.0.0', () => {
-    console.log('Server is running on port 3000');
+// Change the listen line to specify the host
+app.listen(PORT, '127.0.0.1', () => {
+    console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });
